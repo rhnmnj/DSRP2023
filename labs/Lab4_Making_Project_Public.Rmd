@@ -1,0 +1,4 @@
+The dataset is about salaries of different people of various age groups, education level, etc.\
+The link to the dataset is - <https://www.kaggle.com/datasets/mohithsairamreddy/salary-data>
+
+Purpose of repository - To learn more about data science using R programming language
