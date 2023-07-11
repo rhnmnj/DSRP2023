@@ -1,0 +1,10 @@
+```{r setup}
+install.packages("dplyr")
+library(dplyr)
+
+```
+
+```{r}
+starwars
+head(starwars)
+```
