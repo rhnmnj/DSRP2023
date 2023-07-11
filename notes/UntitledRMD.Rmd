@@ -1,5 +1,4 @@
 ```{r setup}
-install.packages("dplyr")
 library(dplyr)
 
 ```

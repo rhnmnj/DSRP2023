@@ -1,10 +1,57 @@
-```{r setup}
-install.packages("dplyr")
+```{r}
 library(dplyr)
-
 ```
 
+## Reading the data
+
 ```{r}
-starwars
-head(starwars)
+spotify_data <- read.csv("C:/Users/rhnpu/Downloads/DSRP_2023/data/Spotify_data.csv")
+spotify_data
+```
+
+## 1. Filtering the observations of your dataset based on one or more variable using filter()
+
+```{r}
+filter(spotify_data, Gender == "Male", spotify_usage_period == "More than 2 years")
+```
+
+## 2. Create a smaller dataset with a subset of variables using select()
+
+```{r}
+spotify_small <- select(spotify_data, Age, spotify_usage_period, spotify_subscription_plan, premium_sub_willingness, music_recc_rating
+)
+spotify_small
+```
+
+## 3. Add 2 new columns to your dataset using mutate()
+
+```{r}
+mutate(spotify_small,
+       less_promotion = premium_sub_willingness,
+       rating = music_recc_rating)
+```
+
+## 4. Create a data table of grouped summaries on at least one numeric variable by at least one categorical variable using summarize()
+
+```{r}
+summarize(spotify_small,
+          mean_rating = mean(music_recc_rating, na.rm = T),
+          count = n(),
+          .by = Age)
+```
+
+## 5. Reorder a data table of your choice by one or more variables using arrange()
+
+```{r}
+arrange(spotify_data, Age, spotify_usage_period)
+```
+
+## 6. Create at least one new visualization using some form of an updated dataset
+
+```{r}
+library(ggplot2)
+#ggplot(data = spotify_small, aes(x = Age)) +
+ # geom_histogram()
+ggplot(data = spotify_small, aes(x = music_recc_rating)) +
+  geom_histogram()
 ```
