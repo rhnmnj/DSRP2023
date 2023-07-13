@@ -1,0 +1,41 @@
+```{r}
+library(ggplot2)
+```
+
+```{r}
+ggplot(data = salary_data, aes(x = Age, y = Salary)) +
+  geom_point(aes(color = Gender)) +
+  scale_color_manual(values = c("red", "blue")) +
+  labs(title = "Salary vs Age")
+```
+
+**What insights or conclusions can you draw from the plot? How might these findings be useful or relevant in a real-world context?**
+
+Ans. From this plot, I can conclude that the salary progresses with age. I can also conclude that the men and women salaries are spread out almost equally.\
+But I can also find the salary of men to be slightly higher than women in an age group.
+
+**Are there any limitations to the conclusions we can draw from this plot? What other information would you need to make more robust conclusions?**
+
+Ans. The data may suffer from bias as it may not be representing an entire population.\
+There is also a gender imbalance in the plot as there are seen to be more males than females.\
+We must include people from variety of backgrounds, experience, education level, etc and also create a balance between the genders in order to give a more accurate plot.
+
+**Are there any relationships or associations between the variables that stand out? If so, what might be the underlying reasons or explanations for these relationships?**
+
+Yes, the relationship between the variables is that as the age increases, the salary too increases. This could be because older people have more experience as compared to younger people.
+
+**Can you think of any ways in which the data collection process could have introduced bias? How might this bias affect the conclusions drawn from the plot?**
+
+The data collection process could have introduced bias, because here we can see that there are more males in the data than females. This could affect the conclusions drawn from the plot as we must take a balance of the two genders to get a more generalized idea of the relationship between salary and age.
+
+**Can you think of any follow-up questions or further analyses that could provide additional insights into the data?**
+
+Regional Analysis: Considering regional differences can be informative. Analyzing salary trends by age across different geographic locations can highlight variations in compensation levels, cost of living, and economic factors that influence salaries within specific regions.
+
+**Are there any ethical considerations or potential social biases associated with the data used in your plot? How might these considerations influence the conclusions and implications?**
+
+The social bias here could be that more number of males have been included in the data than women.
+
+**How would you communicate the potential sources of bias and limitations to someone who is unfamiliar with the data and plot? How can you effectively convey the importance of critical interpretation and awareness of bias?**
+
+When examining data and plots, it is crucial to approach them with critical interpretation and awareness of potential bias and limitations. Bias refers to systematic errors or deviations that can affect the accuracy of the findings, while limitations are inherent weaknesses or constraints in the data. For instance, a salary versus age plot may suffer from sample bias if the data is collected from a specific industry or geographic location, limiting its generalizability. It is important to understand that a single plot cannot capture the full complexity of a topic and may overlook crucial factors such as gender disparities or economic conditions. By questioning and considering alternative explanations, examining multiple plots, and exploring diverse perspectives, we can gain a more comprehensive understanding of the data and mitigate the limitations associated with a single plot. This approach promotes a more accurate and insightful analysis, leading to better-informed conclusions.
