@@ -236,3 +236,7 @@ summarize(starwars,
           count = n(),
           .by = species)
 ```
+
+## Renaming
+
+rename(data, new_name = old_name)
