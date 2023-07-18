@@ -1,2 +1,4 @@
 # DSRP2023
-This is about the Data Science Research Program and everything I have learnt and done in the course.
+This consists of all the work done in the Data Science Research Program 2023
+Programming language used - R
+Projects include plotting and analyzing data, supervised and unsupervised machine learning, etc.
