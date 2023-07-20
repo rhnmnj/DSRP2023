@@ -1,24 +1,26 @@
 ## Unsupervised learning ####
 ## Principal Components Analysis
 
-head(iris)
+head(salary_data)
 
 ## remove any non-numeric variables
-iris_num <- select(iris, -Species)
-iris_num
+salary_num <- select(salary_data, -Job.Title, -Education.Level, -Gender)
+salary_num
 
 
 ## do PCA
-pcas <- prcomp(iris_num, scale. = T)
+pcas <- prcomp(salary_num, scale. = T)
 summary(pcas)
 pcas$rotation
 
+pcas$rotation^2
 
 # get the x values of PCAs and make it a data frame
 pca_vals <- as.data.frame(pcas$x)
-pca_vals$Species <- iris$Species
+pca_vals
+pca_vals$Job.Title <- iris$Job.Title
 
-ggplot(pca_vals, aes(PC1, PC2, color = Species)) +
+ggplot(pca_vals, aes(PC1, PC2, color = PC3)) +
   geom_point() +
   theme_minimal()
 
